@@ -1,0 +1,33 @@
+{
+  "name": "next_paper",
+  "version": "1.0.0",
+  "description": "A next version of paper_reader",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linknasubi/Next_Paper.git"
+  },
+  "keywords": [
+    "paper",
+    "next"
+  ],
+  "author": "Gabriel Aragao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/linknasubi/Next_Paper/issues"
+  },
+  "homepage": "https://github.com/linknasubi/Next_Paper#readme",
+  "dependencies": {
+    "next": "^10.0.9",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+  
+}
