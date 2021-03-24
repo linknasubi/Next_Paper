@@ -103,7 +103,8 @@
     }
 
     html{
-        background-color:#F0F0F0
+        background-color:#F0F0F0;
+        overflow-x: hidden;
     }
 
     div.content{
@@ -159,6 +160,23 @@
         animation-name: h2_after;
         animation-duration: 2s;
         animation-delay: 0s;
+    }
+
+
+    footer{
+
+        position:absolute;
+        bottom:0;
+        width:100vw;
+        text-align:center;
+        background-color:gray;
+
+    }
+
+    p.footer{
+        font-size:1.2em;
+
+        font-family:"Courier New";
     }
     
     

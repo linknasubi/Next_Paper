@@ -2,7 +2,7 @@ const Footer = () => {
 
     return(
         <footer>
-            <a >Contato: freelypapering@gmail.com</a>
+            <p className="footer">Contato: freelypapering@gmail.com</p>
         </footer>
     )
 
