@@ -2,9 +2,13 @@ div.content{
    
     text-align: center;
     display: block;
+    margin: 0 auto;
+    max-width: 55em;
 
-    margin: 0 25vw;
+}
 
-    max-width: 100%;
-
+p.textContent{
+    font-size: 1.5em;
+    font-family:'sans-serif';
+    font-weight:bold;
 }

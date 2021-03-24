@@ -4,7 +4,9 @@ const text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean au
 
 function HomePage() {
     return (
-    <div>Welcome to Next.js! {text}</div>
+    <div>
+      <p className='textContent'>{text}</p>
+    </div>
       )
   }
   
