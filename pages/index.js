@@ -5,6 +5,9 @@ const text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean au
 function HomePage() {
     return (
     <div>
+      <h2>
+        <p className='titleContent'>Title</p>
+      </h2>
       <p className='textContent'>{text}</p>
     </div>
       )

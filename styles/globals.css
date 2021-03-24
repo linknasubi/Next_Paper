@@ -1,14 +1,126 @@
-div.content{
-   
-    text-align: center;
-    display: block;
-    margin: 0 auto;
-    max-width: 55em;
+
+
+@media (max-width: 1080px){
+
+
+    html{
+        background-color:#F0F0F0
+    }
+
+    div.content{
+    
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        max-width: 35em;
+
+        
+    }
+    
+    p.textContent{
+        font-size: 1.05em;
+        font-family:'sans-serif';
+        font-weight:bold;
+        margin:40 auto;
+    }
+
+
+    p.titleContent{
+        font-size: 1.8em;
+        font-family:'sans-serif';
+        font-weight:bold;
+        margin:40 auto;
+    }
+    
+    h2::before{
+        content:'';
+        width:250px;
+        height:3px;
+        background:	#A0A0A0;
+        display:block;
+        margin:30px auto;
+    
+        animation-name: h2_before;
+        animation-duration: 3s;
+        animation-delay: 0s;
+    }
+
+
+    h2::after{
+        content:'';
+        width:350px;
+        height:5px;
+        background:	#A0A0A0;
+        display:block;
+        margin:30px auto;
+    
+        animation-name: h2_after;
+        animation-duration: 2s;
+        animation-delay: 0s;
+    }
+    
+    
+
+
+
 
 }
 
-p.textContent{
-    font-size: 1.5em;
-    font-family:'sans-serif';
-    font-weight:bold;
+@media (min-width: 1081px){
+
+    html{
+        background-color:#F0F0F0
+    }
+
+    div.content{
+    
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        max-width: 65em;
+    
+    }
+
+    p.textContent{
+        font-size: 1.85em;
+        font-family:'sans-serif';
+        font-weight:bold;
+        margin:40 auto;
+    }
+
+    p.titleContent{
+        font-size: 2.2em;
+        font-family:'sans-serif';
+        font-weight:bold;
+        margin:40 auto;
+    }
+    
+    h2::after{
+        content:'';
+        width:400px;
+        height:5px;
+        background:	#A0A0A0;
+        display:block;
+        margin:30px auto;
+    
+        animation-name: h2_after;
+        animation-duration: 2s;
+        animation-delay: 0s;
+    }
+    
+    
+    h2::before{
+        content:'';
+        width:300px;
+        height:3px;
+        background:	#A0A0A0;
+        display:block;
+        margin:30px auto;
+    
+        animation-name: h2_before;
+        animation-duration: 3s;
+        animation-delay: 0s;
+    }
 }
+
+
