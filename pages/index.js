@@ -5,6 +5,25 @@ const text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean au
 
 
 function HomePage() {
+
+  const submitUrl = async event => {
+    event.preventDefault();
+
+    const res = await fetch('/api/paper', {
+      body: JSON.stringify({
+        name:urlText.value
+      }),
+      headers:{
+        'Content-Type': 'application/json'
+      },
+      method:'POST'
+
+    })
+
+    const result = await res.json()
+    console.log(result);
+  }
+
     return (
     <>
     <Head>
@@ -13,10 +32,10 @@ function HomePage() {
     </Head>
 
     <div>
-    <input
-        name="email"
-        type="email"
-      />
+    <form onSubmit={submitUrl}>
+      <input name="urlText" type="text" id='urlText' required/>
+
+    </form>
       <h2>
         <p className='titleContent'>Title</p>
       </h2>
@@ -26,5 +45,6 @@ function HomePage() {
     </>
       )
   }
+
   
   export default HomePage
