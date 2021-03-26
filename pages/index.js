@@ -11,7 +11,7 @@ function HomePage() {
 
     const res = await fetch('/api/paper', {
       body: JSON.stringify({
-        name:urlText.value
+        urlText:urlText.value
       }),
       headers:{
         'Content-Type': 'application/json'
@@ -21,9 +21,10 @@ function HomePage() {
     })
 
     const result = await res.json()
-    console.log(result);
-  }
+    console.log(result)
 
+  }
+  
     return (
     <>
     <Head>
