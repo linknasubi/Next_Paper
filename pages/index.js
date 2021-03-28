@@ -13,8 +13,9 @@ let result={title:'a', text:'a'}
 const HomePage = props =>{
 
   const [cookie, setCookie] = useCookies(["content"])
+  props.title = 'Insira a URL'
 
-  
+
   const submitUrl = async event => {
     event.preventDefault();
 
@@ -31,24 +32,30 @@ const HomePage = props =>{
 
     result = await res.json()
 
-    
-    
 
-    setCookie("user", JSON.stringify(result), {
+    setCookie("text", JSON.stringify(result.text), {
       path:'/',
-      maxAge:120,
+      maxAge:1200,
       sameSite:true,
 
     })
 
-    console.log(result)
+    setCookie("title", JSON.stringify(result.title), {
+      path:'/',
+      maxAge:1200,
+      sameSite:true,
+
+    })
 
 
     //Router.reload(window.location.pathname);
-  
+    
 
     }
+
+    console.log({props})
   
+
     return (
     <>
     <Head>
@@ -61,11 +68,11 @@ const HomePage = props =>{
       <input name="urlText" type="text" id='urlText' required/>
 
     </form>
-      {props.title}
+      
       <h2>
         <p className='titleContent'>Title</p>
       </h2>
-      <p className='textContent'>{text}</p>
+    <p className='textContent'>{props.text}</p>
     </div>
 
     </>
@@ -75,9 +82,10 @@ const HomePage = props =>{
   HomePage.getInitialProps = async ({ req }) => {
 
     const data = parseCookies(req);
+    console.log(data)
     
 
-    return {data: data}
+    return data
 
 
   }

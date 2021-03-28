@@ -165,7 +165,7 @@
 
     footer{
 
-        position:absolute;
+        position:relative;
         bottom:0;
         background-color:gray;
         
