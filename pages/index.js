@@ -111,17 +111,17 @@ const HomePage = props =>{
 
     for(let k=0; k<text.length-3; k++){
 
-      aux = text[k]
-      aux_2 = text[k+1]
-      aux_3 = text[k+2]
+      aux = (text[k] == '"')
+      aux_2 = (text[k+1] == ',')
+      aux_3 = (text[k+2] == '"')
 
-      if(aux=='"' && aux_2 == ',' && aux_3 == '"' && ind_aux!=0){
+      if(aux && aux_2 && aux_3 && ind_aux!=0){
         array.push(text.slice(ind_aux+3, k));
         ind_aux = k;
 
       }
 
-      if(aux=='"' && aux_2 == ',' && aux_3 == '"' && ind_aux==0){
+      if(aux && aux_2 && aux_3 && ind_aux==0){
         array.push(text.slice(ind_aux+1, k));
         ind_aux = k;
 
