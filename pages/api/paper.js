@@ -11,7 +11,6 @@ export default (req, res) => {
             obj.title = searched.title;
             obj.text = searched.text;
             res.status(200).json(obj);
-            console.log(obj.title);
         })
         .catch((err)=>{console.log(err);})
         return;

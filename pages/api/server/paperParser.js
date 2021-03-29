@@ -45,7 +45,13 @@ function textSearch(url){
         });
     
         await obj._page.goto(url);
-        await obj._page.waitForSelector('footer', {timeout:10000}); //Waits for the selector mentioned to be loaded
+
+        await obj._page.waitForSelector('footer', {timeout:5000}).then(() => {
+          console.log('Footer Found');
+        }).catch(async e => {
+            
+        }); //Waits for the selector mentioned to be loaded
+
     
         console.log('Page loaded!');
         
