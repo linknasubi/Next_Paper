@@ -13,7 +13,7 @@ var result={title:'', text:''}
 const HomePage = props =>{
 
   const [cookie, setCookie] = useCookies(["content"])
-  let text, title;
+  let text, title, array_text;
 
 
   const submitUrl = async event => {
@@ -54,7 +54,15 @@ const HomePage = props =>{
 
     if(props.text != undefined){
 
-      text = textcookieParser(props.text)
+      array_text = textcookieParser(props.text)
+      text = array_text.map(txt=><p className='textContent'>{txt}</p>)
+
+    }
+
+    else{
+
+      text = ''
+      
     }
 
 
@@ -76,7 +84,7 @@ const HomePage = props =>{
           <p className='titleContent'>{props.title}</p>
         </h2>
   
-        {text.map(txt=><p className='textContent'>{txt}</p>)}
+        {text}
 
   
       </div>
